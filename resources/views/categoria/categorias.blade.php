@@ -4,8 +4,6 @@
 @section('title', 'Categorías')
 
 @section('navbar')
-
-<<<<<<< HEAD
 <div class="container mt-5">
     <h1 class="text-center mb-4">Categorías</h1>
     <hr>
@@ -92,38 +90,4 @@
     }
 </style>
 
-=======
-<div class="container">
-  <h1>Categorías</h1>
-  <hr>
-  <a href="{{ route('categorias.crear') }}" class="btn btn-primary mb-3">Agregar Categoría</a>
-  <table class="table table-striped">
-      <thead>
-          <tr>
-              <th>#</th>
-              <th>Nombre</th>
-              <th>Descripción</th>
-              <th>Acciones</th>
-          </tr>
-      </thead>
-      <tbody>
-          @foreach ($categorias as $categoria)
-          <tr>
-              <td>{{ $loop->iteration }}</td>
-              <td>{{ $categoria->Nombre }}</td>
-              <td>{{ $categoria->Descripcion }}</td>
-              <td>
-                  <a href="{{ route('categorias.edit', $categoria->CategoriaID) }}" class="btn btn-sm btn-primary">Editar</a>
-                  <form action="{{ route('categorias.destroy', $categoria->CategoriaID) }}" method="POST" style="display:inline;">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                  </form>
-              </td>
-          </tr>
-          @endforeach
-      </tbody>
-  </table>
-</div>
->>>>>>> 5d3cc81026752c25640f01d1b65edaeeda571f0f
 @endsection

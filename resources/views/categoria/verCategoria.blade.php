@@ -36,7 +36,6 @@
                       placeholder="Ingrese la descripción de la categoría">{{ isset($categoria) ? $categoria->Descripcion : old('Descripcion') }}</textarea>
         </div>
 
-<<<<<<< HEAD
         <button type="submit" class="btn btn-custom-primary">{{ isset($categoria) ? 'Actualizar Categoría' : 'Agregar Categoría' }}</button>
         <a href="{{ route('categorias.index') }}" class="btn btn-custom-secondary">Cancelar</a>
     </form>
@@ -66,10 +65,4 @@
         border-color: #dae0e5;
     }
 </style>
-=======
-        <button type="submit" class="btn btn-primary">{{ isset($categoria) ? 'Actualizar Categoría' : 'Agregar Categoría' }}</button>
-        <a href="{{ route('categorias.index') }}" class="btn btn-secondary">Cancelar</a>
-    </form>
-</div>
->>>>>>> 5d3cc81026752c25640f01d1b65edaeeda571f0f
 @endsection
